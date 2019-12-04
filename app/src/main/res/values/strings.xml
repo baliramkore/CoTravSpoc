@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Spoc</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="places_api_key">AIzaSyCDxtgGnzqRw8pKxuVDyE1HGkdGDRGnLVU</string>
+    <!--<string name="places_api_key">AIzaSyA1JtGvEdtW-AQWRPnHsaG88U1nA_KZg4M</string>-->
+    <!-- <string name="places_api_key">AIzaSyBnkMgcMCVIZR3VJStLMa8Xtv_taxVkcrw</string>-->
+</resources>

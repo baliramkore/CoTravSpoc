@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/text_relative"
+        android:layout_centerHorizontal="true">
+
+        <com.rey.material.widget.TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_preview"
+            android:hint="@string/app_name"
+            android:layout_centerHorizontal="true"
+            android:text="Bus Priority"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp" />
+        <ImageView
+            android:layout_toStartOf="@id/text_preview"
+            android:layout_width="25dp"
+            android:layout_height="55dp"
+            android:src="@drawable/icon_location"/>
+
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:id="@+id/divider"
+        android:layout_below="@+id/text_relative"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="25dp"
+            android:layout_height="55dp"
+            android:src="@drawable/location_icon"/>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority 1"/>
+
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        style="@style/mySpinnerItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priority_1"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="25dp"
+            android:layout_height="55dp"
+            android:src="@drawable/location_icon"/>
+        <TextView
+            android:layout_marginStart="10dp"
+
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority 2"/>
+
+        <Spinner
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            style="@style/mySpinnerItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/priority_2"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="25dp"
+            android:layout_height="55dp"
+            android:id="@+id/pr3_img"
+            android:src="@drawable/location_icon"/>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="16dp"
+            android:id="@+id/pr3_text"
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority 3"/>
+
+        <Spinner
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            style="@style/mySpinnerItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/priority_3"
+            />
+    </LinearLayout>
+
+    <com.rey.material.widget.Button
+        android:layout_marginTop="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:layout_below="@+id/center_image"
+        android:text="ok"
+        app:rd_enable="true"
+        app:rd_rippleType="wave"
+        android:layout_centerInParent="true"
+        android:background="@color/cotravTabColorfirst"
+        android:textColor="@color/cotravTabColorDarkBlack" />
+
+
+</LinearLayout>

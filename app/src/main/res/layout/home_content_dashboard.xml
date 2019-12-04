@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <!-- <ImageView
+
+                 android:id="@+id/profilemenu"
+                 android:src="@drawable/menu"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_gravity="start"
+                 android:layout_margin="26dp"
+                 app:borderWidth="0dp"/>-->
+            <!-- <ImageView
+                 android:id="@+id/fab"
+                 android:src="@drawable/logout"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_gravity="end|bottom"
+                 android:layout_margin="26dp"
+                 app:borderWidth="0dp" />
+ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <!--  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:text="CoTrav Welcomes You"
+                      android:textAlignment="center"
+                      android:gravity="center"
+                      android:textSize="22dp"
+                      android:textStyle="bold" />-->
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="start"
+                     android:layout_marginBottom="10dp"
+                     android:text="Welcome Employee"
+                     android:textAlignment="center"
+                     android:textSize="18dp"
+                     android:textStyle="bold" />-->
+
+                <!--    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Shreyash Pattewar"
+                        android:textAlignment="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+    -->
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bookingslayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileLayout">
+
+            <ImageView
+                android:id="@+id/taxiimage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:src="@drawable/taxi_icon" />
+
+            <ImageView
+                android:id="@+id/busimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:src="@drawable/bus_icon"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:id="@+id/hotelimage"
+                android:src="@drawable/hotel_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:id="@+id/trainimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:src="@drawable/train_icon" />
+
+            <ImageView
+                android:id="@+id/flightimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:src="@drawable/flight_icon"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookingslayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Taxi"
+                android:textColor="#707070"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"                android:gravity="center"
+                android:text="Bus"
+                android:textSize="12dp"
+                android:textColor="#707070"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Hotel"
+                android:textSize="12dp"
+                android:textColor="#707070"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Train"
+                android:textSize="12dp"
+                android:textColor="#707070"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="Flight"
+                android:textColor="#707070"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_to_refresh_home"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_layout"
+            android:background="#c9cfd6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_marginTop="10dp"
+            android:id="@+id/scrolllayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_layout"
+            android:background="#c9cfd6"
+            >
+
+            <LinearLayout
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/network_error"
+                    android:visibility="gone"
+                    android:textSize="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/cotravRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="You Are Not Connected To Server ! Swipe To Refresh."/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:background="#ffffff"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Total Booking"
+                        android:fontFamily="@font/montserrat"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                       />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <!-- <LinearLayout
+                             android:layout_marginLeft="30dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:orientation="vertical"
+                             >
+
+                             <me.grantland.widget.AutofitTextView
+                                 android:layout_weight="1"
+                                 android:layout_width="60dp"
+                                 android:layout_height="wrap_content"
+                                 android:textStyle="bold"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/white"
+                                 android:background="@color/darkblue"
+                                 android:gravity="center"
+                                 android:text="TAXI"/>
+                             <me.grantland.widget.AutofitTextView
+                                 android:layout_weight="1"
+                                 android:layout_width="60dp"
+                                 android:layout_height="wrap_content"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 android:background="@color/colorDivider"
+                                 android:gravity="center"
+                                 android:text="BUS"/>
+                             <me.grantland.widget.AutofitTextView
+                                 android:layout_weight="1"
+                                 android:layout_width="60dp"
+                                 android:layout_height="wrap_content"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 android:background="@color/colorPrimaryLight"
+                                 android:gravity="center"
+                                 android:text="HOTEL"/>
+                             <me.grantland.widget.AutofitTextView
+                                 android:layout_weight="1"
+                                 android:layout_width="60dp"
+                                 android:layout_height="wrap_content"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 android:background="@color/colorPrimary"
+                                 android:gravity="center"
+                                 android:text="TRAIN"/>
+                             <me.grantland.widget.AutofitTextView
+                                 android:layout_weight="1"
+                                 android:layout_width="60dp"
+                                 android:layout_height="wrap_content"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 android:background="@color/colorSecondaryText"
+                                 android:gravity="center"
+                                 android:text="Flight"/>
+
+                         </LinearLayout>-->
+                        <LinearLayout
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:backgroundTint="@color/darkblue"
+                                    android:background="@drawable/circle"/>
+
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:gravity="start"
+                                    android:text="Taxi"
+                                    android:padding="5dp"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:backgroundTint="@color/colorDivider"
+                                    android:background="@drawable/circle"/>
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Bus"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:backgroundTint="@color/colorPrimaryLight"
+                                    android:background="@drawable/circle"/>
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Hotel"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:background="@drawable/circle"/>
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Train"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:backgroundTint="@color/colorSecondaryText"
+                                    android:background="@drawable/circle"/>
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Flight"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+
+                            <lecho.lib.hellocharts.view.PieChartView
+                                android:id="@+id/chart"
+                                android:layout_weight="1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+                            <TextView
+                                android:id="@+id/total_bookings_pi"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                />
+
+                            <TextView
+                                android:gravity="center"
+                                android:layout_below="@+id/total_bookings_pi"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Bookings"
+                                style="@style/NormalText"
+                                />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:background="#ffffff"
+                    >
+                    <TextView
+                        android:id="@+id/request_pending_layout_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Bookings Pending for Approval"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:paddingLeft="4dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/taxi_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Taxi"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:id="@+id/taxi_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bus_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Bus"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/bus_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/train_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Train"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/train_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/hotel_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Hotel"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/hotel_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/flight_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Flight"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/flight_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:background="#ffffff"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Approved and Upcoming Bookings"
+                        android:fontFamily="@font/montserrat"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:paddingLeft="4dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Taxi"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:id="@+id/up_taxi_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:text="Bus"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/up_bus_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp"
+                                />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Train"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/up_train_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp"
+                               />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Hotel"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/up_hotel_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp"
+                                 />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_marginTop="2dp"
+                                android:text="Flight"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/up_flight_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="bottom"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:fontFamily="@font/montserrat"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="25dp" />
+                        </LinearLayout>
+                    </LinearLayout></LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+            </LinearLayout>
+        </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@drawable/cotrav_background"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"/>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_bus"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_add_bus_booking">
+
+    <ScrollView
+        android:isScrollContainer="false"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:id="@+id/radio_pickup_city"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Pickup City"
+                        android:editable="false"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_drop_city"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Drop City"
+                        android:editable="false"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/location_icon"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_boarding_point"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Boarding Point"
+                        android:textAlignment="textStart"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/icon_date"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_date_from"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Date From"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_time_from"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Time From"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_date_to"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Date To"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_date"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_time_to"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Time To"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_passengers"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Passengers"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_building"
+                        android:layout_marginTop="20dp" />
+                    <EditText
+                        android:id="@+id/radio_priority"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Priority"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/radio_reason"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Reason For Booking"
+                        android:textAlignment="textStart"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:paddingStart="30dp"
+                        android:paddingLeft="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="14dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_submit"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Submit">
+                </Button>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

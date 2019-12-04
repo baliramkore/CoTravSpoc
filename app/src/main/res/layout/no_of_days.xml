@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_relative"
+            android:layout_centerHorizontal="true">
+
+            <com.rey.material.widget.TextView
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_preview"
+                android:hint="@string/app_name"
+                android:layout_centerHorizontal="true"
+                android:text="No of Days"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:layout_below="@+id/text_preview"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_arrow_down"
+                    android:layout_below="@+id/text_preview"
+                    android:id="@+id/days_icon"
+
+                    android:layout_toRightOf="@+id/passenger_1"
+                    android:layout_toEndOf="@+id/passenger_1"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/center_image"
+            android:background="#e2e2e2"
+            android:layout_below="@+id/text_relative">
+
+            <ImageView
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_width="25dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/plus_one"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/outline_add"/>
+            <com.rey.material.widget.TextView
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:hint="1"
+                android:paddingStart="3dp"
+                android:paddingLeft="3dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/total_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="76sp"
+                android:textColor="@color/colorPrimaryText" />
+            <ImageView
+                android:layout_marginStart="57dp"
+                android:layout_marginLeft="57dp"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="100dp"
+                android:id="@+id/negative_one"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:src="@drawable/minus_base_icon"
+                />
+        </RelativeLayout>
+
+
+
+
+        <com.rey.material.widget.Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ok"
+            android:layout_below="@+id/center_image"
+            android:text="ok"
+            android:layout_centerInParent="true"
+            android:background="@color/colorPrimaryText"
+            android:textColor="@color/cardview_light_background" />
+
+    </RelativeLayout>
+
+</LinearLayout>

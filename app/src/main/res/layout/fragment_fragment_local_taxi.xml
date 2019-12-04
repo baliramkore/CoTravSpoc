@@ -1,0 +1,561 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FragmentLocalTaxi">
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:text="Local Taxi Booking"
+                style="@style/NormalText"
+                android:gravity="center"
+                ></TextView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cotravTabColor_one"
+                android:layout_below="@+id/local_spinner_city"/>
+            <LinearLayout
+                android:padding="20dp"
+                android:background="@drawable/layout_border_custom"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="55dp"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/icon_building" />
+
+                    <LinearLayout
+                        android:id="@+id/local_spinnerPickupCity"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:id="@+id/local_spinner_city"
+                            android:layout_alignParentStart="true"
+                            style="@style/NormalText"
+                            android:textSize="12dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorPrimaryText"
+                            android:layout_below="@+id/local_spinner_city"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="55dp"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/icon_taxi_type" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:id="@+id/local_spinnerTaxiType"
+                            android:layout_alignParentStart="true"
+                            style="@style/NormalText"
+                            android:textSize="14dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorPrimaryText"
+                            android:layout_below="@+id/local_spinner_city"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="55dp"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/icon_pickup_location" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/local_pickupLocation"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:text="Pickup Location"
+                            android:gravity="bottom"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryText"
+                            android:layout_alignParentStart="true"
+                            style="@style/NormalText"
+                            android:textSize="12dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorPrimaryText"
+                            android:layout_below="@+id/local_spinner_city"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="55dp"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/icon_drop_location" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/local_dropLocation"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:text="Drop Location"
+                            android:gravity="bottom"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryText"
+                            android:layout_alignParentStart="true"
+                            style="@style/NormalText"
+                            android:textSize="12dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorPrimaryText"
+                            android:layout_below="@+id/local_spinner_city"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="Fill Date And Time"
+                    style="@style/NormalText"
+                    android:gravity="center"
+                    ></TextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/cotravTabColor_one"
+                    android:layout_below="@+id/local_spinner_city"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/nextLyout"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_pickup_date" />
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/local_datePickup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pickup Date"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:textColor="@color/colorPrimaryText"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorPrimaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_pickup_time" />
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/local_timePickup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pickup Time"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:textColor="@color/colorPrimaryText"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorPrimaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_assisment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_building" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                    android:id="@+id/local_assesmentCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_assisment_code" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                    android:id="@+id/local_assesmentCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_billing" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                    android:id="@+id/local_billingEntity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_passenger" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/local_pessangers"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Passenger"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:textColor="@color/colorPrimaryText"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="55dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/icon_package" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/local_package"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Select Package"
+                                    android:gravity="bottom"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:textColor="@color/colorPrimaryText"
+                                    android:layout_alignParentStart="true"
+                                    style="@style/NormalText"
+                                    android:textSize="12dp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/local_package"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="45dp"-->
+<!--                                    android:layout_alignParentStart="true"-->
+<!--                                    android:textSize="12dp" />-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentStart="true"
+                                    android:textSize="12dp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/colorSecondaryText"
+                                    android:layout_below="@+id/local_spinner_city"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <EditText
+                            android:id="@+id/local_reason"
+                            android:layout_marginTop="20dp"
+                            android:hint="Reason For Booking"
+                            android:layout_width="match_parent"
+                            style="@style/NormalText"
+                            android:layout_height="wrap_content">
+                        </EditText>
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_marginTop="25dp"
+                            android:layout_gravity="center"
+                            android:layout_width="150dp"
+                            android:layout_height="38dp"
+                            android:layout_centerInParent="true"
+                            android:outlineSpotShadowColor="@color/white"
+                            android:textColor="@color/white"
+                            android:text="Submit"
+                            android:elevation="6dp"
+                            android:background="@color/cotravTabColorfirst"
+                            android:backgroundTint="@color/cotravTabColorfirst"
+                            style="@style/NormalText"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

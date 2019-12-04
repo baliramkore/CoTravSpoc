@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/nav_home"
+        android:icon="@drawable/traveler_icon"
+
+        android:checkableBehavior="single">
+
+        <item android:title=" Home"
+            android:icon="@drawable/home"
+            android:id="@+id/drawer_home" />
+
+        <item android:title=" Profile"
+        android:icon="@drawable/user"
+        android:id="@+id/nav_profile" />
+
+    <item
+        android:id="@+id/nav_spoc_detail"
+        android:icon="@drawable/information"
+        android:title=" Spoc Details"
+        />
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/support_hours"
+        android:title=" Support" />
+    <item
+        android:id="@+id/nav_aboutus"
+        android:icon="@drawable/contact_us_icon"
+        android:title=" About Us" />
+
+    </group>
+    <item android:title=" Logout"
+        android:icon="@drawable/logout"
+        android:id="@+id/nav_sign_out" />
+</menu>
